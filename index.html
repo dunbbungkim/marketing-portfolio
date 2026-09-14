@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Marketer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 가독성이 뛰어난 프리텐다드 폰트 적용 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Marketer.</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="section fade-in">
+        <h1>데이터를 넘어<br>비즈니스 성장을 설계합니다.</h1>
+        <p>크로스 미디어 최적화부터 파이썬(Python) 기반 데이터 자동화까지,<br>단순한 노출을 넘어 실질적인 전환(Action)을 만드는 퍼포먼스 마케터입니다.</p>
+        <a href="#contact" class="btn">프로젝트 논의하기</a>
+    </section>
+
+    <section id="expertise" class="section fade-in">
+        <h2>Core Expertise</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Technical Tracking</h3>
+                <p>GTM, Meta/Kakao 픽셀 등 정교한 트래킹 환경 구축 및 API를 활용한 검색량 데이터 수집 자동화</p>
+            </div>
+            <div class="card">
+                <h3>Creative Directing</h3>
+                <p>포토샵, 다빈치 리졸브를 활용한 영상/이미지 소재 기획 및 타겟 국가(일본, 영미권 등) 뉘앙스에 맞춘 정교한 카피라이팅</p>
+            </div>
+            <div class="card">
+                <h3>High-Level Campaign</h3>
+                <p>심의가 까다로운 의료 광고 최적화 및 도쿄 등 해외 현지 프로모션 모객 마케팅 운영 경험</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="section fade-in">
+        <h2>Case Studies</h2>
+        <p class="section-desc">단순 노출이 아닌, 특정 액션 버튼 클릭률(CTR)과 CPA 등 핵심 지표의 실질적 개선을 이끌어냅니다.</p>
+        
+        <div class="portfolio-item">
+            <div class="portfolio-text">
+                <h3>글로벌 브랜드 컨설팅 프로모션</h3>
+                <p>해외 인플루언서 협업 및 타겟 맞춤형 캠페인 집행을 통한 핵심 전환율 개선</p>
+            </div>
+            <div class="portfolio-graph">
+                <div class="bar-group">
+                    <span class="bar-label">집행 전 (Before)</span>
+                    <!-- 높이를 고정값으로 줍니다 -->
+                    <div class="bar before-bar" style="height: 30%;">
+                        <span class="bar-value">1.2%</span>
+                    </div>
+                </div>
+                <div class="bar-group">
+                    <span class="bar-label">집행 후 (After CTR)</span>
+                    <!-- data-target에 목표 높이를 입력하면 JS가 애니메이션을 처리합니다 -->
+                    <div class="bar after-bar" data-target="85%">
+                        <span class="bar-value">4.5%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section fade-in">
+        <h2>Let's Work Together</h2>
+        <p>협업 제안이나 궁금하신 점이 있다면 언제든 연락해 주세요.</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com" class="btn outline">이메일 보내기</a>
+            <a href="#" class="btn outline">카카오톡 오픈프로필</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
