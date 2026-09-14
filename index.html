@@ -10,9 +10,11 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">Marketer.</div>
+        <!-- 1번 수정: Marketer. -> Marketer. HONG -->
+        <div class="logo">Marketer. HONG</div>
         <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
+            <!-- 2번 수정: Home -> Title -->
+            <li><a href="#hero">Title</a></li>
             <li><a href="#expertise">Expertise</a></li>
             <li><a href="#works">Works</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -20,9 +22,13 @@
     </nav>
 
     <section id="hero" class="section fade-in">
-        <h1>데이터를 넘어<br>비즈니스 성장을 설계합니다.</h1>
-        <p>크로스 미디어 최적화부터 파이썬(Python) 기반 데이터 자동화까지,<br>단순한 노출을 넘어 실질적인 전환(Action)을 만드는 퍼포먼스 마케터입니다.</p>
-        <a href="#contact" class="btn">프로젝트 논의하기</a>
+        <!-- 3번 수정: 헤드 카피 변경 및 줄바꿈 적용 -->
+        <h1>Bright Efficiently<br>10개의 전구보다 빛나는 1개의 LED</h1>
+        
+        <!-- 4번 수정: 서브 카피 변경 및 줄바꿈 적용 -->
+        <p>미디어 플랜부터 소재 제작, 캠페인 세팅, 데이터 분석까지<br>정련된 스킬로 10인의 몫을 해내는 1인 프리랜서 마케터</p>
+        
+        <!-- 5번 수정: 프로젝트 논의하기 버튼 삭제 완료 -->
     </section>
 
     <section id="expertise" class="section fade-in">
@@ -55,14 +61,12 @@
             <div class="portfolio-graph">
                 <div class="bar-group">
                     <span class="bar-label">집행 전 (Before)</span>
-                    <!-- 높이를 고정값으로 줍니다 -->
                     <div class="bar before-bar" style="height: 30%;">
                         <span class="bar-value">1.2%</span>
                     </div>
                 </div>
                 <div class="bar-group">
                     <span class="bar-label">집행 후 (After CTR)</span>
-                    <!-- data-target에 목표 높이를 입력하면 JS가 애니메이션을 처리합니다 -->
                     <div class="bar after-bar" data-target="85%">
                         <span class="bar-value">4.5%</span>
                     </div>
