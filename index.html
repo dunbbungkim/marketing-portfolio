@@ -10,10 +10,8 @@
 </head>
 <body>
     <nav class="navbar">
-        <!-- 1번 수정: Marketer. -> Marketer. HONG -->
         <div class="logo">Marketer. HONG</div>
         <ul class="nav-links">
-            <!-- 2번 수정: Home -> Title -->
             <li><a href="#hero">Title</a></li>
             <li><a href="#expertise">Expertise</a></li>
             <li><a href="#works">Works</a></li>
@@ -22,13 +20,44 @@
     </nav>
 
     <section id="hero" class="section fade-in">
-        <!-- 3번 수정: 헤드 카피 변경 및 줄바꿈 적용 -->
-        <h1>Bright Efficiently<br>10개의 전구보다 빛나는 1개의 LED</h1>
+    <h1>
+        <span class="hero-title-main">Bright Efficiently</span>
+        <span class="hero-title-sub">10개의 전구보다 빛나는 1개의 LED</span>
+    </h1>
+    
+    <!-- [신규] 텍스트와 이미지를 나란히 배치할 래퍼 -->
+    <div class="hero-content-wrapper">
         
-        <!-- 4번 수정: 서브 카피 변경 및 줄바꿈 적용 -->
-        <p>미디어 플랜부터 소재 제작, 캠페인 세팅, 데이터 분석까지<br>정련된 스킬로 10인의 몫을 해내는 1인 프리랜서 마케터</p>
-        
-        <!-- 5번 수정: 프로젝트 논의하기 버튼 삭제 완료 -->
+        <!-- [좌측] 기존 텍스트 및 태그 영역 (레이아웃 완벽 보존) -->
+        <div class="hero-text-content">
+            <!-- 2줄 서비스 박스 영역 -->
+            <div class="service-tags-container">
+                <div class="service-tags-row">
+                    <span class="service-tag">미디어 플래닝</span>
+                    <span class="service-tag">데이터 트래킹 세팅</span>
+                    <span class="service-tag">크리에이티브 기획</span>
+                </div>
+                <div class="service-tags-row">
+                    <span class="service-tag">이미지·영상 소재 제작</span>
+                    <span class="service-tag">캠페인 세팅</span>
+                    <span class="service-tag">광고 운영·리포팅</span>
+                </div>
+            </div>
+
+            <!-- 박스 하단 신규 카피 영역 -->
+            <div class="hero-sub-copy">
+                <p>퍼포먼스 마케팅의 모든 순간을 단독으로 컨트롤합니다</p>
+                <p>복잡한 소통 절차도, 기나긴 리드 타임도 필요 없습니다</p>
+                <p class="highlight">최소 리소스로 최대 결과를 만들어내는 고효율 마케터</p>
+            </div>
+        </div>
+
+        <!-- [우측] 삽입할 이미지 영역 -->
+        <div class="hero-image-container">
+            <img src="images/1.png" alt="Performance Marketing Dashboard Illustration">
+        </div>
+
+    </div>
     </section>
 
     <section id="expertise" class="section fade-in">
