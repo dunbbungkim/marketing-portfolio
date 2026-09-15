@@ -1,9 +1,11 @@
 /* 기본 설정 및 변수 */
 :root {
-    --bg-color: #FAFAFA;
-    --text-color: #111111;
-    --accent-color: #2563EB; /* 신뢰감을 주는 블루 */
-    --border-color: #E5E5E5;
+    --bg-color: #121212; /* 다크모드 메인 배경색 (완전한 블랙이 아닌 딥 다크 톤) */
+    --text-color: #F3F4F6; /* 다크모드 메인 텍스트 색상 */
+    --sub-text-color: #A1A1AA; /* 보조 설명 및 서브 타이틀 텍스트 색상 */
+    --accent-color: #3B82F6; /* 다크모드에서 대비가 뛰어난 시그니처 블루 */
+    --border-color: #2A2A2A; /* 은은한 다크 테두리 색상 */
+    --card-bg: #1E1E1E; /* 카드 및 포트폴리오 상자 배경색 */
 }
 
 * {
@@ -28,8 +30,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(250, 250, 250, 0.9);
-    backdrop-filter: blur(10px); /* 촌스럽지 않은 은은한 블러 */
+    background: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(10px); /* 은은한 블러 효과 */
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
 }
@@ -62,11 +64,40 @@ body {
     justify-content: center;
 }
 
+/* --- hero 섹션 전용 밀착 스타일 --- */
+#hero {
+    justify-content: flex-start;
+    padding-top: 100px;
+    min-height: auto;
+}
+
 h1 {
-    font-size: 4rem;
-    line-height: 1.2;
-    margin-bottom: 24px;
+    line-height: 1.05;
+    margin-top: 0;
+    margin-bottom: 28px;
     letter-spacing: -0.02em;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 상단 영문 메인 카피 */
+.hero-title-main {
+    font-size: clamp(3.5rem, 8.5vw, 7.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    color: var(--text-color);
+    white-space: nowrap;
+    margin-top: -0.05em;
+}
+
+/* 하단 한글 서브 타이틀 */
+.hero-title-sub {
+    font-size: clamp(1.75rem, 3.0vw, 2.75rem);
+    font-weight: 600;
+    color: var(--sub-text-color);
+    letter-spacing: -0.01em;
 }
 
 h2 {
@@ -78,8 +109,8 @@ h2 {
 }
 
 p {
-    font-size: 1.125rem;
-    color: #555;
+    font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+    color: var(--sub-text-color);
     margin-bottom: 30px;
 }
 
@@ -105,6 +136,7 @@ p {
     background-color: transparent;
     color: var(--text-color);
 }
+
 .btn.outline:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
@@ -120,21 +152,21 @@ p {
 .card {
     padding: 40px;
     border: 1px solid var(--border-color);
-    background-color: #fff;
+    background-color: var(--card-bg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* 포트폴리오 그래프 영역 (핵심 피드백 반영) */
+/* 포트폴리오 그래프 영역 */
 .portfolio-item {
     display: flex;
     align-items: flex-end;
     gap: 50px;
-    background: #fff;
+    background: var(--card-bg);
     padding: 50px;
     border: 1px solid var(--border-color);
 }
@@ -160,35 +192,37 @@ p {
 .bar-label {
     font-size: 0.9rem;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .bar {
     width: 80px;
-    background-color: #E5E5E5;
+    background-color: #2A2A2A;
     border-radius: 4px 4px 0 0;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-top: 10px;
-    /* 애니메이션 설정 */
     transition: height 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .bar-value {
     font-weight: 700;
-    color: #333;
+    color: var(--text-color);
 }
 
 .after-bar {
     background-color: var(--accent-color);
-    height: 0; /* JS로 이 높이를 타겟만큼 채워줍니다 */
+    height: 0;
 }
+
 .after-bar .bar-value {
-    color: #fff;
-    opacity: 0; /* 처음에 숫자 숨김 */
-    transition: opacity 0.5s ease 1s; /* 그래프가 오르고 난 뒤 숫자 등장 */
+    color: #FFFFFF;
+    opacity: 0;
+    transition: opacity 0.5s ease 1s;
 }
+
 .after-bar.animate .bar-value {
     opacity: 1;
 }
@@ -203,4 +237,103 @@ p {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* 서비스 태그 박스 및 서브 카피 스타일 */
+.service-tags-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+    margin-bottom: 18px;
+}
+
+.service-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.service-tag {
+    background-color: var(--text-color) !important;
+    color: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: clamp(0.875rem, 1.1vw, 1.125rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-sub-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hero-sub-copy p {
+    margin-top: 12px;
+    margin-bottom: 0;
+    color: var(--sub-text-color);
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.0;
+}
+
+.hero-sub-copy p.highlight {
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 12px;
+}
+
+/* Hero 영역 우측 이미지 삽입 레이아웃 */
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+.hero-text-content {
+    flex: 0 0 auto;
+    max-width: 520px;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image-container img {
+    width: 100%;
+    max-width: 620px;
+    max-height: 320px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 모바일/태블릿 화면 반응형 처리 */
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .hero-text-content {
+        max-width: 100%;
+    }
+    
+    .hero-image-container {
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    .hero-image-container img {
+        max-height: none;
+    }
 }
